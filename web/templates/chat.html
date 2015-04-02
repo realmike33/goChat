@@ -1,0 +1,10 @@
+<div style="text-align: center">
+  <div class="jumbotron">
+    <h1>Chat: {{connection}}</h1>
+    <input placeholder="username" ng-model="name"/>
+  </div>
+  <ul style="list-style: none">
+    <li ng-repeat="message in messages track by $index">{{message.name}} posted: {{message.message}}</li>
+  </ul>
+  <input placeholder="message" ng-model="msg"/><button ng-click="send()" class="btn btn-primary btn-sm">Send</button>
+</div>
